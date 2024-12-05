@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Clientes</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header class="top-bar">
+        <h1>Gerenciamento de Clientes</h1>
+    </header>
+    <main>
+        <section id="clientes">
+            <h2>Clientes</h2>
+            <div id="listaClientes" class="clientes-container"></div>
+            <button id="addClienteBtn" class="btn-green">Add</button>
+        </section>
+    </main>
+    <div id="addClienteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeAddCliente">&times;</span>
+            <h2>Adicionar Cliente</h2>
+            <form id="addClienteForm">
+                <div class="form-row">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-row">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" required>
+                </div>
+                <div class="form-row">
+                    <label for="dataNascimento">Data de Nascimento:</label>
+                    <input type="date" id="dataNascimento" name="dataNascimento" required>
+                </div>
+                <div class="form-row">
+                    <button type="submit">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="escolhaPlanoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeEscolhaPlano">&times;</span>
+            <h2>Escolha um Plano</h2>
+            <button class="plano-btn" onclick="escolherPlano('mensal')">Mensal</button>
+            <button class="plano-btn" onclick="escolherPlano('trimestral')">Trimestral</button>
+            <button class="plano-btn" onclick="escolherPlano('anual')">Anual</button>
+        </div>
+    </div>
+    <div id="renovarModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeRenovar">&times;</span>
+            <h2>Renovar Assinatura</h2>
+            <button class="plano-btn" onclick="renovarPlano('mensal')">Mensal</button>
+            <button class="plano-btn" onclick="renovarPlano('trimestral')">Trimestral</button>
+            <button class="plano-btn" onclick="renovarPlano('anual')">Anual</button>
+        </div>
+    </div>
+    <script src="assets/js/clientes.js"></script>
+</body>
+</html>

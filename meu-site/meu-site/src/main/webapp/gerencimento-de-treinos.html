@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Treinos</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header class="top-bar">
+        <h1>Gerenciamento de Treinos</h1>
+    </header>
+    <main>
+        <section id="treinos">
+            <h2>Treinos</h2>
+            <div id="listaTreinos" class="treinos-container"></div>
+            <button id="addTreinoBtn" class="btn-green">Add Treino</button>
+        </section>
+    </main>
+    <div id="addTreinoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeAddTreino">&times;</span>
+            <h2>Adicionar Treino</h2>
+            <form id="addTreinoForm">
+                <div class="form-row">
+                    <label for="nomeCliente">Nome do Cliente:</label>
+                    <input type="text" id="nomeCliente" name="nomeCliente" list="clientesList" required>
+                    <datalist id="clientesList"></datalist>
+                </div>
+                <div class="form-row">
+                    <label for="nomeTreino">Nome do Treino:</label>
+                    <input type="text" id="nomeTreino" name="nomeTreino" required>
+                </div>
+                <div class="form-row">
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" id="descricao" name="descricao" required>
+                </div>
+                <div class="form-row">
+                    <label for="dataInicioTreino">Data de Início:</label>
+                    <input type="date" id="dataInicioTreino" name="dataInicioTreino" required>
+                </div>
+                <div class="form-row">
+                    <label for="maquinas">Máquinas:</label>
+                    <input type="text" id="maquinas" name="maquinas" required>
+                </div>
+                <div class="form-row">
+                    <label for="tempoDescanso">Tempo de Descanso (minutos):</label>
+                    <input type="number" id="tempoDescanso" name="tempoDescanso" required>
+                </div>
+                <div class="form-row">
+                    <button type="submit">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="editClienteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeEditCliente">&times;</span>
+            <h2>Editar Cliente</h2>
+            <form id="editClienteForm">
+                <div class="form-row">
+                    <label for="nomeClienteEdit">Nome do Cliente:</label>
+                    <input type="text" id="nomeClienteEdit" name="nomeClienteEdit" required>
+                </div>
+                <div class="form-row">
+                    <label for="emailClienteEdit">Email do Cliente:</label>
+                    <input type="email" id="emailClienteEdit" name="emailClienteEdit" required>
+                </div>
+                <div class="form-row">
+                    <label for="telefoneClienteEdit">Telefone do Cliente:</label>
+                    <input type="tel" id="telefoneClienteEdit" name="telefoneClienteEdit" required>
+                </div>
+                <input type="hidden" id="clienteIndex" name="clienteIndex">
+                <div class="form-row">
+                    <button type="submit">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="assets/js/treinos.js"></script>
+</body>
+</html>
